@@ -1,0 +1,9 @@
+@use 'reset';
+@use 'variables' as vars;
+
+body {
+  display: grid;
+  box-sizing: border-box;
+  color: vars.$color;
+  animation-delay: 0ms;
+}
