@@ -160,16 +160,17 @@ body {
   -webkit-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
-  background: black !important;
 }
 
 #root {
   margin: 0 auto;
-  height: 2000px;
+  height: 900px;
   width: 100%;
   max-width: 872px;
   background: #fff;
+  color: #000000;
   font-family: "Merriweather Sans", sans-serif;
+  line-height: 1.5;
 }
 
 .header__top {
@@ -213,33 +214,129 @@ body {
   cursor: pointer;
   width: 45px;
 }
-.header__top-item-dropdown:hover .header__top-item-dropdown-content {
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
-  opacity: 1;
-  pointer-events: all;
+.header__top-item-dropdown-icon {
+  pointer-events: none;
 }
 .header__top-item-dropdown-content {
   bottom: 0;
   opacity: 0;
-  -webkit-transform: translateY(25px);
-      -ms-transform: translateY(25px);
-          transform: translateY(25px);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(105%);
+      -ms-transform: translateY(105%);
+          transform: translateY(105%);
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   background-color: #fff;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   pointer-events: none;
   right: 0;
+  color: #666666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  width: 150px;
 }
-.header__top-item-dropdown-content--active {
+.header__top-item-dropdown-content.expanded {
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
           transform: translateY(100%);
   opacity: 1;
   pointer-events: all;
+}
+.header__top-item-dropdown-content-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 50px;
+  border: none;
+  margin-left: 10px;
+}
+.header__top-item-dropdown-content-input:focus {
+  outline: none;
+}
+.header__top-item-dropdown-content-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+}
+
+.header__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 35px 4px;
+}
+.header__main-logo {
+  height: 80px;
+}
+.header__main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__main-nav-item, .header__main-nav-item--dropdown {
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.header__main-nav-item--dropdown {
+  position: relative;
+}
+.header__main-nav-item--dropdown-content {
+  color: #44667c;
+  left: 5px;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(105%);
+      -ms-transform: translateY(105%);
+          transform: translateY(105%);
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.header__main-nav-item--dropdown-content.expanded {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 1;
+  pointer-events: all;
+}
+.header__main-nav-item--dropdown-content-nav {
+  padding: 20px;
+  gap: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header__main-nav-item--dropdown-content-nav > a:hover {
+  color: #d8770e;
+}
+.header__main-nav-item-icon {
+  margin-left: 6px;
 }
