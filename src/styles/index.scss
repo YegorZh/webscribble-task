@@ -23,11 +23,11 @@ body {
 // Reusable
 @mixin dropdown {
   position: relative;
-  &:hover &-content {
-    transform: translateY(100%);
-    opacity: 1;
-    pointer-events: all;
-  }
+  // &:hover &-content {
+  //   transform: translateY(100%);
+  //   opacity: 1;
+  //   pointer-events: all;
+  // }
 }
 
 @mixin dropdown-content {
@@ -39,12 +39,13 @@ body {
   background-color: $color-bg-main;
   transition: 0.5s;
   pointer-events: none;
-  &--active {
+  &.expanded {
     transform: translateY(100%);
     opacity: 1;
     pointer-events: all;
   }
 }
+
 // Specific css
 .header__top {
   height: 26px;
@@ -80,6 +81,9 @@ body {
       @include dropdown();
       cursor: pointer;
       width: 45px;
+      &-icon {
+        pointer-events: none;
+      }
       &-content {
         @include dropdown-content();
         // width: 100px;
