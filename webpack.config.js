@@ -14,7 +14,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.ts'],
   },
   devServer: {
-    watchFiles: [path.resolve(__dirname, 'index.html')],
+    watchFiles: [path.resolve(__dirname, './index.html')],
   },
   // devtool: prod ? undefined : 'source-map',
   module: {

@@ -5,20 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebScribble test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div class="root">
+  <body class="preload">
+    <div id="root">
       <header class="header">
         <nav class="header__top">
-          <a href="#" class="header__top-item">75th Anniversary Year</a>
-          <a href="#" class="header__top-item">Contact</a>
-          <a href="#" class="header__top-item">Renew</a>
-          <a href="#" class="header__top-item">Join</a>
-          <a href="#" class="header__top-item">Subscribe for Email Updates</a>
-          <a href="#" class="header__top-item">f</a>
-          <a href="#" class="header__top-item">tw</a>
-          <a href="#" class="header__top-item">li</a>
-          <button class="header__top-item">search</button>
+          <a href="#" class="header__top-item-text"
+            >75th Anniversary Year</a
+          >
+          <a href="#" class="header__top-item-text">Contact</a>
+          <a href="#" class="header__top-item-text">Renew</a>
+          <a href="#" class="header__top-item-text">Join</a>
+          <a href="#" class="header__top-item-text"
+            >Subscribe for Email Updates</a
+          >
+          <span class="header__top-item-icon">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </span>
+          <span class="header__top-item-icon">
+            <a href="#"><i class="fa-brands fa-twitter-square"></i
+              ></i></a>
+          </span>
+          <span class="header__top-item-icon">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </span>
+          <div class="header__top-item-dropdown">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="header__top-item-dropdown-content">
+              <input type="text" placeholder="Search.." class="header__top-item-dropdown-content-input">
+              <button class="header__top-item-dropdown-content-button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
         </nav>
         <div class="header__main">
           <a href="/" classname="header__main-logo-container">
@@ -30,11 +55,31 @@
           </a>
           <nav class="header__main-nav">
             <a href="#" class="header__main-nav-item">Home</a>
-            <a href="#" class="header__main-nav-item">About</a>
-            <a href="#" class="header__main-nav-item">Membership</a>
-            <a href="#" class="header__main-nav-item">Meetings & Events</a>
-            <a href="#" class="header__main-nav-item">Resources</a>
-            <a href="#" class="header__main-nav-item">Career Center</a>
+            <span
+              href="#"
+              class="header__main-nav-item header__main-nav-item--dropdown"
+              >About</span
+            >
+            <span
+              href="#"
+              class="header__main-nav-item header__main-nav-item--dropdown"
+              >Membership</span
+            >
+            <span
+              href="#"
+              class="header__main-nav-item header__main-nav-item--dropdown"
+              >Meetings & Events</span
+            >
+            <span
+              href="#"
+              class="header__main-nav-item header__main-nav-item--dropdown"
+              >Resources</span
+            >
+            <span
+              href="#"
+              class="header__main-nav-item header__main-nav-item--dropdown"
+              >Career Center</span
+            >
           </nav>
         </div>
       </header>

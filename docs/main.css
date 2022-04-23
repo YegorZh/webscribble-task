@@ -1,10 +1,245 @@
 /*!**********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
   \**********************************************************************************************************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
 body {
-  display: grid;
+  line-height: 1;
+}
+
+button {
+  background: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+::before,
+::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-animation-delay: 0ms;
-          animation-delay: 0ms;
+}
+
+body {
+  background: #edf3f9;
+}
+
+.preload {
+  -webkit-animation-duration: 0s !important;
+          animation-duration: 0s !important;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  background: black !important;
+}
+
+#root {
+  margin: 0 auto;
+  height: 2000px;
+  width: 100%;
+  max-width: 872px;
+  background: #fff;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.header__top {
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fff;
+  background: #44667c;
+}
+.header__top-item-text, .header__top-item-icon, .header__top-item-dropdown {
+  margin: auto 0;
+}
+.header__top-item-text:hover, .header__top-item-icon:hover, .header__top-item-dropdown:hover {
+  background: #d8770e;
+}
+.header__top-item-text {
+  padding: 5px 11px;
+  font-size: 10px;
+  font-weight: 300;
+}
+.header__top-item-icon, .header__top-item-dropdown {
+  height: 100%;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28px;
+}
+.header__top-item-dropdown {
+  position: relative;
+  cursor: pointer;
+  width: 45px;
+}
+.header__top-item-dropdown:hover .header__top-item-dropdown-content {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 1;
+  pointer-events: all;
+}
+.header__top-item-dropdown-content {
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+      -ms-transform: translateY(25px);
+          transform: translateY(25px);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  pointer-events: none;
+  right: 0;
+}
+.header__top-item-dropdown-content--active {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 1;
+  pointer-events: all;
 }
