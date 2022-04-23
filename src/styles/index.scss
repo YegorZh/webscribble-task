@@ -16,7 +16,9 @@ body {
   width: 100%;
   max-width: 872px;
   background: $color-bg-main;
+  color: $color-text-main;
   font-family: $font-family;
+  line-height: 1.5;
 }
 // Reusable
 @mixin dropdown {
@@ -31,11 +33,11 @@ body {
 @mixin dropdown-content {
   bottom: 0;
   opacity: 0;
-  transform: translateY(120%);
-  box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.1);
+  transform: translateY(105%);
+  box-shadow: 0 6px 10px rgba($color: #000000, $alpha: 0.1);
   position: absolute;
   background-color: $color-bg-main;
-  transition: 0.4s;
+  transition: 0.5s;
   pointer-events: none;
   &--active {
     transform: translateY(100%);
@@ -44,67 +46,110 @@ body {
   }
 }
 // Specific css
-.header {
-  &__top {
-    height: 26px;
-    display: flex;
-    justify-content: flex-end;
-    color: $color-text-secondary;
-    background: $color-brand;
-    &-item {
-      &-text,
-      &-icon,
-      &-dropdown {
-        margin: auto 0;
-        &:hover {
-          background: $color-bg-accent;
+.header__top {
+  height: 26px;
+  display: flex;
+  justify-content: flex-end;
+  color: $color-text-secondary;
+  background: $color-brand;
+  &-item {
+    &-text,
+    &-icon,
+    &-dropdown {
+      margin: auto 0;
+      &:hover {
+        background: $color-accent;
+      }
+    }
+
+    &-text {
+      padding: 5px 11px;
+      font-size: 10px;
+      font-weight: 300;
+    }
+    &-icon,
+    &-dropdown {
+      height: 100%;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+    }
+    &-dropdown {
+      @include dropdown();
+      cursor: pointer;
+      width: 45px;
+      &-content {
+        @include dropdown-content();
+        // width: 100px;
+        right: 0;
+        color: $color-text-darker;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        width: 150px;
+        &-input {
+          flex: 1 0 auto;
+          width: 50px;
+          border: none;
+          margin-left: 10px;
+          &:focus {
+            outline: none;
+          }
+        }
+        &-button {
+          flex: 0 0 auto;
+          cursor: pointer;
+          height: 35px;
+          width: 35px;
         }
       }
+    }
+  }
+}
 
-      &-text {
-        padding: 5px 11px;
-        font-size: 10px;
-        font-weight: 300;
-      }
-      &-icon,
-      &-dropdown {
-        height: 100%;
-        font-size: 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 28px;
-      }
-      &-dropdown {
-        @include dropdown();
-        cursor: pointer;
-        width: 45px;
-        &-content {
-          @include dropdown-content();
-          // width: 100px;
-          right: 0;
-          color: $color-text-darker;
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 35px 4px;
+  &-logo {
+    height: 80px;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    &-item,
+    &-item--dropdown {
+      // background: red;
+      cursor: pointer;
+      white-space: nowrap;
+      padding: 5px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    &-item--dropdown {
+      @include dropdown();
+      &-content {
+        color: $color-brand;
+        left: 5px;
+        @include dropdown-content();
+        &-nav {
+          padding: 20px;
+          gap: 35px;
           display: flex;
-          align-items: center;
-          height: 45px;
-          width: 150px;
-          &-input {
-            flex: 1 0 auto;
-            width: 50px;
-            border: none;
-            margin-left: 10px;
-            &:focus {
-              outline: none;
+          flex-direction: column;
+          & > a {
+            &:hover {
+              color: $color-accent;
             }
           }
-          &-button {
-            flex: 0 0 auto;
-            cursor: pointer;
-            height: 35px;
-            width: 35px;
-          }
         }
       }
+    }
+
+    &-item-icon {
+      margin-left: 6px;
     }
   }
 }
